@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block head %}
+  <head profile="http://www.w3.org/2005/10/profile">
+
+{% block meta %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="{% block description %}Flickr2CDB{% endblock %}">
+    <meta name="author" content="CartoDB">
+{% endblock %}
+
+    <title>{% block title %}Flickr2CDB{% endblock %}</title>
+
+{% block css %}
+    <link href="//cartodb-libs.global.ssl.fastly.net/cartodbui/assets/3.4.9/favicons/favicon.ico?1411985985" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styleguide.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+{% endblock %}
+  </head>
+{% endblock %}
+  <body>
+
+    <div class="Grid fill-blue color-white">
+        <div class="Grid-inner Grid-inner--vcenter">
+          <div class="Grid-cell Grid-cell--col9">
+            <h1 class="">
+              <strong>{% block page_title %} Flickr 2 CDB {% endblock %}</strong>
+            </h1>
+          </div>
+          <div class="Grid-cell Grid-cell--col3">
+            <nav class="">
+              <ul class="u-ilist">
+                <li class="u-malign"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://cartodb.com" data-text="Carbon Tool Calculator from @cartoDB" data-via="CartoDB">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
+              </ul>
+            </nav>
+          </div>
+      </div>
+    </div>
+    <div class="Grid">
+      <div class="Grid-inner Grid-inner--hfull fill-medium">
+          <div class="Grid-cell Grid-cell--col12 page_content">
+{% block page_content %}
+
+{% endblock %}
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="Grid fill-blue color-white">
+        <div class="Grid-inner Grid-inner--vcenter">
+          <div class="Grid-cell Grid-cell--col12">
+            <h1 class="">
+              <strong>2015</strong>
+            </h1>
+          </div>
+      </div>
+    </div>
+
+
+{% block scripts %}
+
+{% endblock %}
+
+  </body>
+</html>
+
+
+
+
